@@ -9,3 +9,6 @@
 <h2>Palidromeloop:</h2>
 <p>Asks user input and reverses it. Stops if palidrome like 'saippuakivikauppias'.</p>
 
+<h2>EmployeeFile</h2>
+<p>Asks employee names. Writes them to employees.csv file. If inserted value is "0" script breaks and print empoloyees.</p>
+

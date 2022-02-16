@@ -1,5 +1,5 @@
 #!/bin/bash
-# asks employee names. Writes them to employees.csv file. If inserted value is "0" script breaks and print empoloyees.
+# Asks employee names. Writes them to employees.csv file. If inserted value is "0" script breaks and print empoloyees.
 
 # print ID:s and names to csv.file.
 print_csv()
