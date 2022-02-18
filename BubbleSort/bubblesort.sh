@@ -17,15 +17,18 @@ print_original_numbers()
     
         if [[ original_numbers[-2] -gt original_numbers[-1] ]]; then
           last=${original_numbers[-1]}
+          echo "$last"
           secondlast=${original_numbers[-2]}
-          new_numbers+=($last)
+          
+          new_numbers+=($last $secondlast)
           echo "${new_numbers[@]}"
           echo 'swap'
           
           
         else
-          new_numbers+=($secondlast)
+          new_numbers+=($secondlast $last)
           echo "${new_numbers[@]}"
+          echo "$secondlast"
           echo 'noswap'
           
         fi
