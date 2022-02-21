@@ -12,3 +12,6 @@
 <h2>EmployeeFile</h2>
 <p>Asks employee names. Writes them to employees.csv file. If inserted value is "0" script breaks and print empoloyees.</p>
 
+<h2>BubbleSort</h2>
+<p>Asks 5 numbers from user. Sort them from smallest to biggest.</p>
+
