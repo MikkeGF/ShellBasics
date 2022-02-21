@@ -6,7 +6,7 @@ bubblesort()
 ---------------------------
 Your numbers: ${numbers[@]}
 ---------------------------
-    "
+"
     n=${#numbers[@]}
     for i in `seq 0 $n` 
     do
@@ -16,20 +16,15 @@ Your numbers: ${numbers[@]}
                 swap=${numbers[j]}
                 numbers[j]=${numbers[j-1]}
                 numbers[j-1]=$swap
-            fi
-            
-        done
-        
+            fi   
+        done   
     done
 echo "
 ---------------------------
 Sorted numbers: ${numbers[@]}
 ---------------------------
-    "         
+"         
 }
-
-
-
 
 while :
     read -p "Insert 5 numbers" number    
@@ -37,20 +32,14 @@ do
     numbercount=$(($numbercount + 1))
     re='^[0-9]+$'
     if [[ $number =~ $re ]]; then 
-        i=$(( $i + 1 ))
-        
         numbers+=($number)
-
             if [[ $numbercount -eq "5" ]]; then
                 bubblesort
                 exit
-        else
-        echo -e "insert $((5 - $numbercount)) more."
-        
-        
-    fi
+            else
+            echo -e "insert $((5 - $numbercount)) more."      
+            fi
     else
         echo "Error: Not a number!"
-    fi 
-    
+    fi    
 done
