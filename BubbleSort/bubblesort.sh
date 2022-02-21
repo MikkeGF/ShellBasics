@@ -1,8 +1,8 @@
 #!/bin/bash
-
+# Asks 5 numbers from user. Sort them from smallest to biggest.
 bubblesort()
 {
-    echo "
+echo "
 ---------------------------
 Your numbers: ${numbers[@]}
 ---------------------------
