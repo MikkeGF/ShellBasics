@@ -2,7 +2,11 @@
 
 bubblesort()
 {
-    echo "Your numbers: ${numbers[@]}"
+    echo "
+---------------------------
+Your numbers: ${numbers[@]}
+---------------------------
+    "
     n=${#numbers[@]}
     for i in `seq 0 $n` 
     do
@@ -17,46 +21,14 @@ bubblesort()
         done
         
     done
-echo "sorted numbers: ${numbers[@]}"         
+echo "
+---------------------------
+Sorted numbers: ${numbers[@]}
+---------------------------
+    "         
 }
 
 
-append_numbers()
-{
-    numbers+=($number)
-        if [[ $numbercount -eq "5" ]]; then
-        echo "Thank you!"
-        bubblesort numbers
-        fi
-    
-    # indexes=${!numbers[@]}
-    # len=${#numbers[@]}
-    # echo "len $len"
-    
-    
-    
-    # if [[ len -ge 0 ]] ; then
-    
-    #     if [[ numbers[-2] -gt numbers[-1] ]]; then
-    #       last=${numbers[-1]}
-    #       echo "$last"
-    #       secondlast=${numbers[-2]}
-          
-    #       new_numbers+=($last $secondlast)
-    #       echo "${new_numbers[@]}"
-    #       echo 'swap'
-          
-          
-    #     else
-    #       new_numbers+=($secondlast $last)
-    #       echo "${new_numbers[@]}"
-    #       echo "$secondlast"
-    #       echo 'noswap'
-          
-    #     fi
-    # fi
-
-}
 
 
 while :
@@ -67,12 +39,15 @@ do
     if [[ $number =~ $re ]]; then 
         i=$(( $i + 1 ))
         
-        append_numbers "$number" "$numbercount"
+        numbers+=($number)
 
             if [[ $numbercount -eq "5" ]]; then
+                bubblesort
                 exit
         else
-        echo "insert $((5 - $numbercount)) more."
+        echo -e "insert $((5 - $numbercount)) more."
+        
+        
     fi
     else
         echo "Error: Not a number!"
